@@ -22,8 +22,8 @@ export const BottomTabs = createBottomTabNavigator({
   },
 });
 
-export const RootStack = createNativeStackNavigator({
-  initialRouteName: "bottom-tabs",
+export const RootStack = (initialRouteName: string) => createNativeStackNavigator({
+  initialRouteName,
   groups: {
     Unauthenticated: {
       if: useIsUnauthenticated,

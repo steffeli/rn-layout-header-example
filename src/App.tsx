@@ -1,14 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { createStaticNavigation } from "@react-navigation/native";
-import { RootStack } from "./navigation/RootStack";
 import { NavigationProvider } from "NavigationProvider";
+import RootNavigator from "navigation/RootNavigator";
 
-const Navigation = createStaticNavigation(RootStack);
 
 export default function App() {
   return (
     <NavigationProvider>
-      <Navigation />
+      <RootNavigator />
       <StatusBar />
     </NavigationProvider>
   );
